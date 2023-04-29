@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Text, View, Button } from 'react-native';
 
 export default function App() {
-  const [texto, setTexto] = useState('Oi');
+  const [texto, setTexto] = useState(0);
 
   return (
     <View style={{
@@ -29,7 +29,7 @@ export default function App() {
       <View style={{ width: '80%'}}>
         <Button 
           title="OK"
-          onPress={() => setTexto("Olá, Mundo!!!")}
+          onPress={() => setTexto(texto + 1)}
         />
       </View>
     </View>
